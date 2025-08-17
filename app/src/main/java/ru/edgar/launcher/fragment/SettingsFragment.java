@@ -292,6 +292,7 @@ public class SettingsFragment extends MainActivity {
         List<String> url = null;
 
         public DownloadStart(List<String> url, List<String> path, List<String> unZip, List<String> toUnZip) {
+            Log.i("rjryt", "DownloadStart: " + url.size() + " " + path.size() + " " + unZip.size() + " " + toUnZip.size());
             this.url = url;
             this.path = path;
             this.unZip = unZip;

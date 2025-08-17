@@ -141,6 +141,7 @@ public class SplashFragment extends MainActivity{
                         {
                             if(response.body() != null) {
                                 if(response.body().getLauncherVersion() != 34) {
+                                    Log.d("rjryt", response.body().getLauncherUrl());
                                     MainActivity.getMainActivity().openDialog(R.drawable.ic_launcher_question, "Доступна новая версия клиента!\nЗагрузить обновление?", "Да", "Нет", new downloadApk(response.body().getLauncherUrl(), response.body().getLauncherPath(), response.body().getLauncherName()), new noUpdate());
                                 } else {
                                     if (response.body().getIsTest()) {
